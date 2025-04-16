@@ -1,0 +1,26 @@
+{
+  "gpen_portrait": {
+    "download_date": "2025-04-16T21:49:36.394718",
+    "last_used": "2025-04-16T21:49:36.394727",
+    "file_size": 1050000,
+    "category": "portrait",
+    "display_name": "GPEN Portrait",
+    "description": "GAN-based face restoration and enhancement model"
+  },
+  "u2net_portrait": {
+    "download_date": "2025-04-16T21:53:11.832462",
+    "last_used": "2025-04-16T21:53:11.832471",
+    "file_size": 1750000,
+    "category": "background",
+    "display_name": "U^2-Net Portrait",
+    "description": "Portrait segmentation and background enhancement network"
+  },
+  "deblurgan_v2": {
+    "download_date": "2025-04-16T22:00:12.982062",
+    "last_used": "2025-04-16T22:00:12.982071",
+    "file_size": 1350000,
+    "category": "deblur",
+    "display_name": "DeblurGAN v2",
+    "description": "Deep learning model for motion deblurring of photos"
+  }
+}
