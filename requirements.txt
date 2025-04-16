@@ -1,0 +1,10 @@
+streamlit
+opencv-python
+numpy
+pillow
+torch
+torchvision
+torchtext
+transformers
+watchdog
+# Add any other dependencies you need for your projec
