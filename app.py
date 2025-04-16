@@ -265,7 +265,26 @@ def image_enhancer_ui():
     
     # File uploader for image
     uploaded_file = st.file_uploader("Upload an image to enhance", type=["jpg", "jpeg", "png"])
-    
+
+    MAX_SIZE_MB = 5
+
+    if uploaded_file is not None:
+        # 🔐 Validate file type
+        if uploaded_file.type not in ["image/png", "image/jpeg"]:
+            st.error("Only PNG and JPEG files are allowed.")
+            st.stop()
+
+        # 🔐 Validate file size
+        if uploaded_file.size > MAX_SIZE_MB * 1024 * 1024:
+            st.error(f"File too large. Max {MAX_SIZE_MB}MB allowed.")
+            st.stop()
+
+        # ✅ Continue safe processing here
+
+    else:
+        st.info("Please upload a file to begin.")
+
+   
     # Demo button
     col1, col2 = st.columns([1, 3])
     with col1:

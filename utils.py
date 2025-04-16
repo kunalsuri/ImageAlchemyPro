@@ -5,26 +5,13 @@ import io
 import numpy as np
 
 def get_image_download_link(img, filename="enhanced_image.png", text="Download Enhanced Image"):
-    """
-    Generates a link to download the enhanced image.
-    
-    Parameters:
-    -----------
-    img : PIL.Image
-        The image to be made downloadable
-    filename : str, optional
-        The name of the file to be downloaded
-    text : str, optional
-        The text to display on the download link
-        
-    Returns:
-    --------
-    str
-        HTML markup for a download link
-    """
     buffered = io.BytesIO()
     img.save(buffered, format="PNG")
-    img_str = base64.b64encode(buffered.getvalue()).decode()
+    payload = buffered.getvalue()
+    if len(payload) > 10 * 1024 * 1024:
+        st.error("Image too large to encode for download.")
+        return ""
+    img_str = base64.b64encode(payload).decode()
     href = f'<a href="data:file/png;base64,{img_str}" download="{filename}" class="download-btn">{text}</a>'
     return href
 

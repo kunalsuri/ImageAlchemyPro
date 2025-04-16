@@ -16,8 +16,8 @@
     "description": "Portrait segmentation and background enhancement network"
   },
   "deblurgan_v2": {
-    "download_date": "2025-04-16T22:00:12.982062",
-    "last_used": "2025-04-16T22:00:12.982071",
+    "download_date": "2025-04-17T01:38:05.461429",
+    "last_used": "2025-04-17T01:38:05.461437",
     "file_size": 1350000,
     "category": "deblur",
     "display_name": "DeblurGAN v2",
