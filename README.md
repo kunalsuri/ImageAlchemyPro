@@ -23,6 +23,11 @@ A Streamlit application for enhancing images using state-of-the-art open-source 
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Code Execution
+
+```bash
 streamlit run app.py
 ```
 
